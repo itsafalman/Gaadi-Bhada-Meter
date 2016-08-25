@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.l.gaadivaada.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please Choose the Type of Vehicle below."
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:layout_width="185dp"
+        android:layout_height="60dp"
+        android:text="OK"
+        android:background="@color/colorPrimary"
+        android:id="@+id/submit_button"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_marginTop="59dp"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Microbus"
+            android:id="@+id/microbus"
+            android:layout_marginTop="31dp"
+            android:checked="false"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taxi "
+            android:id="@+id/taxi"
+            android:checked="false"
+            android:textSize="20dp"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignStart="@+id/radioButton"
+            android:layout_marginTop="31dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Long Route Bus"
+            android:id="@+id/nightbus"
+            android:textSize="20dp"
+            android:checked="false"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/radioButton2"
+            android:layout_alignStart="@+id/radioButton2" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="185dp"
+        android:layout_height="60dp"
+        android:text="Report Police"
+        android:background="@color/red"
+        android:id="@+id/policereport"
+        android:layout_below="@+id/submit_button"
+        android:layout_alignStart="@+id/submit_button"
+        android:layout_marginTop="59dp"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

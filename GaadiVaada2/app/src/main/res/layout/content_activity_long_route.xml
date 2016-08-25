@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.l.gaadivaada.ActivityLongRoute"
+    tools:showIn="@layout/activity_activity_long_route">
+    <AutoCompleteTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/initial_position"
+        android:hint="From i.e Starting Place"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="62dp"
+        android:textSize="20dp" />
+
+    <AutoCompleteTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/final_position"
+        android:hint="To i.e Final Destination"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="94dp"
+        android:layout_below="@+id/initial_position"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:layout_width="185dp"
+        android:layout_height="60dp"
+        android:text="Get Fare"
+        android:background="@color/colorPrimary"
+        android:id="@+id/calculatefare"
+        android:layout_marginTop="64dp"
+        android:layout_below="@+id/final_position"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Distance:"
+        android:textSize="25dp"
+        android:id="@+id/distancetext"
+        android:layout_alignTop="@+id/distancemeter"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00km"
+        android:layout_above="@+id/vaadameter"
+        android:layout_alignEnd="@+id/vaadameter"
+        android:textSize="25dp"
+        android:id="@+id/distancemeter"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Fare:"
+        android:textSize="25dp"
+        android:layout_below="@+id/distancetext"
+        android:layout_alignStart="@+id/distancetext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs.0.00"
+        android:textSize="25dp"
+        android:id="@+id/vaadameter"
+        android:layout_marginBottom="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/distancetext" />
+</RelativeLayout>
